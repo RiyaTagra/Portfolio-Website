@@ -77,7 +77,30 @@ h1 {
     font-size: 200px;
 }
 
-h2{
+p{
     margin-left: 110px;
     margin-top: 10px;  
+    border-right: solid 3px gray;
+
+    white-space: nowrap;
+    overflow: hidden;  
 }
+
+p{
+    animation: animated-text 4s steps(60) 1s 1 normal both,
+               animated-cursor 600ms steps(60) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 701px;}       /* add width */ 
+}
+/* cursor animations */
+
+@keyframes animated-cursor{
+    from{border-right-color:grey;}
+    to{border-right-color: transparent;}
+}
+
