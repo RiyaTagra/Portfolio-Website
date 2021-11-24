@@ -1,22 +1,25 @@
 *{
     margin: 0; 
     padding: 0;
-    font-family: "poppins", sans-serif; 
+    color:gray; 
+    font-family: 'Source Code Pro', monospace; 
     box-sizing: border-box; 
 } 
 
 .header {
     height:100vh; 
     width: 100%;
-    padding: 0 8%;
-    background: #080008;
+    padding: 28px ;
+    background: #000000;
     position: relative; 
 }
 
 nav {
+    width: 100%; 
     display: flex; 
-    align-items: center; 
-    justify-content: space-between;
+    flex-flow: column-reverse;
+    align-items: flex-end; 
+    /*justify-content: space-between;*/
 }
 
 .logo{
@@ -25,6 +28,7 @@ nav {
 
 .nav-links{
     padding: 28px 0; 
+    align-self: right;
 }
 
 .nav-links li{
@@ -34,14 +38,13 @@ nav {
 
 .nav-links li a{
     text-decoration: none;
-    color: #ffff;
     padding: 5px 0;
     position: relative; 
 }
 
 .nav-links li a::after{
     content: ''; 
-    background: #ff3d00;
+    background: #e634bf;
     width: 0; 
     height: 2px;
     position: absolute; 
@@ -55,9 +58,26 @@ nav {
 }
 
 .btn{
-    background: #ff3d00;
-    color: #fff; 
+    border:solid;
+    border-width: 2px;
+    border-color: #e634bf; 
     padding: 10px 30px; 
     border-radius: 3px;
     cursor: pointer;
+}
+
+h1 {
+    color: whitesmoke; 
+    display: flex; 
+    flex-flow: column-reverse;
+    align-items: left; 
+    margin-top: 50px;
+    margin-left: 100px;
+    font-family: 'Comforter Brush', cursive; 
+    font-size: 200px;
+}
+
+h2{
+    margin-left: 110px;
+    margin-top: 10px;  
 }
