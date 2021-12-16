@@ -135,3 +135,32 @@ p{
     background:#000 url(media/stars.png) repeat top center;
     z-index:0;
   }*/
+
+.glowing {
+    position: relative; 
+    width: 750px; 
+    height: 750px; 
+ }
+
+.glowing span {
+    position: absolut; 
+    top: calc(80px * var(--i));
+    left: calc(80px * var(--i));
+    bottom: calc(80px * var(--i));
+    right: calc(80px * var(--i));
+}
+
+.glowing span:before{
+    content: ''; 
+    position: absolute; 
+    top: 50%; 
+    left: -8px; 
+    width: 15px; 
+    height: 15px; 
+    background: #f00; 
+    border-radius: 50px; 
+}
+
+.glowing span:nth-child(3n + 1):before{
+
+}
