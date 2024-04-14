@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0; 
     padding: 0;
@@ -5,10 +7,11 @@
     font-family: 'Source Code Pro', monospace; 
     box-sizing: border-box; 
     z-index:3;
+
 } 
 
-.header {
-    height:100vh; 
+.content {
+    height:1000vh; 
     width: 100%;
     padding: 28px ;
     background: #dfd3c3;
@@ -16,14 +19,7 @@
     z-index:3;
 }
 
-.middle {
-    height:100vh; 
-    width: 100%;
-    padding: 28px ;
-    background: #dfd3c3;
-    position: relative; 
-    z-index:3;
-}
+
 
 nav {
     width: 100%; 
@@ -77,21 +73,24 @@ nav {
     cursor: pointer;
 }
 
-@media only screen and (min-width : 600px)
+
+/*@media only screen and (min-width : 600px)
 {
     h1 
     {
         font-size: 47.3vw;
     }
-}
+}*/
+
+
 
 h1 {
     color: rgb(0, 0, 0); 
-    display: flex; 
+   /* display: relative; */
     flex-flow: column-reverse;
     align-items: left; 
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 7%;
     font-family: 'Druk Condensed'; 
     text-transform: uppercase;
     font-size: 200px;
@@ -103,18 +102,32 @@ h2 {
     display: flex; 
     flex-flow: column-reverse;
     align-items: left; 
-    margin-top: 50px;
-    margin-left: 100px;
+    margin-top: 60px;
+    margin-left: 7%;
     font-family: 'Druk Condensed'; 
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 50px;
+    text-decoration: bold;
+   /* text-decoration-thickness: 3px;*/
+}
+
+h3 {
+    color: rgb(0, 0, 0); 
+    display: flex; 
+    flex-flow: column-reverse;
+    align-items: left; 
+    margin-top: 20px;
+    margin-left: 7%;
+    font-family: 'Druk Condensed'; 
+    /*text-transform: uppercase;*/
+    font-size: 30px;
+    
 }
 
 p{
-    margin-left: 110px;
-    margin-top: 10px;  
+    margin-left: 7%;
+    margin-top: 7px;  
     border-right: solid 3px rgb(0, 0, 0);
-
     white-space: nowrap;
     overflow: hidden;  
     /* Make sure text is infront of background images */
@@ -128,11 +141,41 @@ p{
                animated-cursor 600ms steps(60) infinite;
 }
 
+t{
+    margin-left: 7%;
+    margin-top: 0.5%;  
+    border-right: solid 3px rgb(0, 0, 0);
+
+    white-space: nowrap;
+    overflow: hidden;  
+    /* Make sure text is infront of background images */
+    display:block;
+    position: relative;
+    z-index: 3;
+}
+
+subt{
+    margin-left: 7%;
+    margin-top: 0.5%;  
+    border-right: solid 3px rgb(0, 0, 0);
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;  
+    /* Make sure text is infront of background images */
+    display:block;
+    position: relative;
+    z-index: 3;
+}
+
+.list{
+    margin-left: 10%
+}
+
 /* text animation */
 
 @keyframes animated-text{
     from{width: 0;}
-    to{width: 708px;}       /* add width */ 
+    to{width: 770px;}       /* add width */ 
 }
 /* cursor animations */
 
@@ -141,12 +184,32 @@ p{
     to{border-right-color: transparent;}
 }
 
-@keyframes move-clouds-back {
-    from{background-position: 0 0;}
-    to{background-position: 10000px 0;}
-}
+/*ul {
+    padding-left: 7%;
+    list-style-type: none;
+  }
+  
+ul li {
+    padding-left: 7%;
+  }*/
 
-@keyframes move-twinkle-back {
-    from{background-position: 0 0;}
-    to{background-position: -10000px 5000px;}
-}
+
+  .grid-container {
+    margin-top: 20px;
+    margin-left: 7%;
+    display: grid;
+    grid-template-columns: auto auto ;
+    /*background-color: #2196F3;*/
+    padding: 10px;
+  }
+  .grid-item {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .grid-pic{
+    
+  }
