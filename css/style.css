@@ -14,12 +14,13 @@
     height:1000vh; 
     width: 100%;
     padding: 28px ;
-    background: #dfd3c3;
+    background: #ffe9ba;
     position: relative; 
     z-index:3;
 }
 
-
+/********************************************/
+/***************** Nav bar ******************/
 
 nav {
     width: 100%; 
@@ -27,7 +28,7 @@ nav {
     flex-flow: column-reverse;
     align-items: flex-end; 
     /*justify-content: space-between;*/
-}
+}xs
 
 .logo{
     width: 140px; 
@@ -73,16 +74,8 @@ nav {
     cursor: pointer;
 }
 
-
-/*@media only screen and (min-width : 600px)
-{
-    h1 
-    {
-        font-size: 47.3vw;
-    }
-}*/
-
-
+/*********************************************/
+/***************** Headings ******************/
 
 h1 {
     color: rgb(0, 0, 0); 
@@ -93,7 +86,7 @@ h1 {
     margin-left: 7%;
     font-family: 'Druk Condensed'; 
     text-transform: uppercase;
-    font-size: 200px;
+    font-size: 13vw;
     
 }
 
@@ -120,9 +113,11 @@ h3 {
     margin-left: 7%;
     font-family: 'Druk Condensed'; 
     /*text-transform: uppercase;*/
-    font-size: 30px;
+    font-size: 20px;
     
 }
+/***********************************************************/
+/***************** Typed text + animation ******************/
 
 p{
     margin-left: 7%;
@@ -141,10 +136,25 @@ p{
                animated-cursor 600ms steps(60) infinite;
 }
 
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 770px;}       /* add width */ 
+}
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color:rgb(0, 0, 0);}
+  to{border-right-color: transparent;}
+}
+
+/******************************************************/
+/***************** text and subtitle ******************/
 t{
     margin-left: 7%;
     margin-top: 0.5%;  
-    border-right: solid 3px rgb(0, 0, 0);
 
     white-space: nowrap;
     overflow: hidden;  
@@ -154,62 +164,92 @@ t{
     z-index: 3;
 }
 
+
 subt{
-    margin-left: 7%;
-    margin-top: 0.5%;  
-    border-right: solid 3px rgb(0, 0, 0);
-    font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;  
-    /* Make sure text is infront of background images */
-    display:block;
-    position: relative;
-    z-index: 3;
+  margin-left: 7%;
+  margin-top: 0.5%;  
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;  
+  /* Make sure text is infront of background images */
+  display:block;
+  position: relative;
+  z-index: 3;
 }
 
 .list{
     margin-left: 10%
 }
 
-/* text animation */
 
-@keyframes animated-text{
-    from{width: 0;}
-    to{width: 770px;}       /* add width */ 
+/**************************************************/
+/******************** images **********************/
+/**************************************************/
+
+
+/*************** image settings *******************/
+img{    /* need to fix sizing for phone screen!!!!! */
+  width: 40vw;
+  height: 30vw;
 }
-/* cursor animations */
 
-@keyframes animated-cursor{
-    from{border-right-color:rgb(0, 0, 0);}
-    to{border-right-color: transparent;}
+/** settings for animation for drust picture **/
+.animatedoverlay {
+  position: absolute;
+  width: 40vw;
+  height:30vw;
+  margin-left: 7%;
+  margin-top: 3%;  
+  display:block;
+  z-index: 3;
 }
 
-/*ul {
-    padding-left: 7%;
-    list-style-type: none;
-  }
-  
-ul li {
-    padding-left: 7%;
-  }*/
+/** settings for animation for debate picture **/
+.debateoverlay {
+  position: absolute;
+  width: 40vw;
+  height:30vw;
+  margin-left: 50%;
+  margin-top: 3%;  
+  display:block;
+  z-index: 3;
+}
 
 
-  .grid-container {
-    margin-top: 20px;
-    margin-left: 7%;
-    display: grid;
-    grid-template-columns: auto auto ;
-    /*background-color: #2196F3;*/
-    padding: 10px;
-  }
-  .grid-item {
-    /*background-color: rgba(255, 255, 255, 0.8);*/
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+/********** overlay settings, same for all of them *********/
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #c7c7c7;
+}
 
-  .grid-pic{
-    
-  }
+
+.animatedoverlay:hover .overlay {
+  opacity: 0.5;
+}
+
+.debateoverlay:hover .overlay {
+  opacity: 0.5;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  font-family: 'Druk Condensed'; 
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: bold;
+
+}
