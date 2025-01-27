@@ -123,6 +123,12 @@ h3 {
 /*********************** intro ***********************/
 
 
+
+.intro{
+  width: 40vw; 
+  height: 50vw; 
+}
+
 /***********************************************************/
 /***************** Typed text + animation ******************/
 
@@ -218,17 +224,32 @@ subt{
 /**************************************************/
 /******************** images **********************/
 /**************************************************/
-
+ img{
+  display: block; 
+  margin: auto; 
+  object-fit: cover;
+ }
 
 /*************** image settings committees *******************/
+
+
+/**test**/
+
+.committeeimg{
+  width: 40vw; 
+  height: 30vw; 
+}
+
+
+
 
 
 
 /** settings for animation for drust picture **/
 .animatedoverlay {
   position: absolute;
-  width: 400px;
-  height:300px;
+  width: 40vw;
+  height:30vw;
   margin-left: 7%;
   margin-top: 3%;  
   display:block;
@@ -238,8 +259,8 @@ subt{
 /** settings for animation for debate picture **/
 .debateoverlay {
   position: absolute;
-  width: 400px;
-  height:300px;
+  width: 40vw;
+  height:30vw;
   margin-left: 50%;
   margin-top: 3%;  
   display:block;
