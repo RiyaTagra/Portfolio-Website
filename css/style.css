@@ -14,7 +14,7 @@
     height:1000vh; 
     width: 100%;
     padding: 28px ;
-    background: #ffe9ba;
+    background: #dbc8ab;
     position: relative; 
     z-index:3;
 }
@@ -78,7 +78,7 @@ nav {
 /***************** Headings ******************/
 
 h1 {
-    color: rgb(0, 0, 0); 
+    color: rgb(100, 39, 39); 
    /* display: relative; */
     flex-flow: column-reverse;
     align-items: left; 
@@ -99,7 +99,7 @@ h2 {
     margin-left: 7%;
     font-family: 'Druk Condensed'; 
     /*text-transform: uppercase;*/
-    font-size: 50px;
+    font-size: 5vw;
     text-decoration: bold;
    /* text-decoration-thickness: 3px;*/
 }
@@ -116,39 +116,70 @@ h3 {
     font-size: 20px;
     
 }
+
+
+
+/******************************************************/
+/*********************** intro ***********************/
+
+
 /***********************************************************/
 /***************** Typed text + animation ******************/
 
 p{
     margin-left: 7%;
     margin-top: 7px;  
-    border-right: solid 3px rgb(0, 0, 0);
-    white-space: nowrap;
+    margin-right: 9vw;
+    /*border-right: solid 3px rgb(0, 0, 0);*/
+    /*white-space: nowrap;
     overflow: hidden;  
     /* Make sure text is infront of background images */
     display:block;
     position: relative;
     z-index: 3;
+    word-break: normal;
+    white-space: normal;
+    font-size: 1.2vw;
+}
+.p
+{
+white-space: normal;
+ overflow-wrap: normal;
+ width: 70vw;
 }
 
+.submenu div p {
+  color:#fff;
+  margin: 0;
+  padding:0;
+  width:70%;
+  position: relative;
+}
+
+
+
+/*
 p{
     animation: animated-text 4s steps(60) 1s 1 normal both,
                animated-cursor 600ms steps(60) infinite;
-}
+}*/
 
 
 /* text animation */
-
+/*
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 770px;}       /* add width */ 
+  to{width: 770px;}       /* add width 
 }
-/* cursor animations */
+/* cursor animations 
 
 @keyframes animated-cursor{
   from{border-right-color:rgb(0, 0, 0);}
   to{border-right-color: transparent;}
-}
+}*/
+
+
+
 
 /******************************************************/
 /***************** text and subtitle ******************/
@@ -182,22 +213,22 @@ subt{
 }
 
 
+
+
 /**************************************************/
 /******************** images **********************/
 /**************************************************/
 
 
-/*************** image settings *******************/
-img{    /* need to fix sizing for phone screen!!!!! */
-  width: 40vw;
-  height: 30vw;
-}
+/*************** image settings committees *******************/
+
+
 
 /** settings for animation for drust picture **/
 .animatedoverlay {
   position: absolute;
-  width: 40vw;
-  height:30vw;
+  width: 400px;
+  height:300px;
   margin-left: 7%;
   margin-top: 3%;  
   display:block;
@@ -207,8 +238,8 @@ img{    /* need to fix sizing for phone screen!!!!! */
 /** settings for animation for debate picture **/
 .debateoverlay {
   position: absolute;
-  width: 40vw;
-  height:30vw;
+  width: 400px;
+  height:300px;
   margin-left: 50%;
   margin-top: 3%;  
   display:block;
